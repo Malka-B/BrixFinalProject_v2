@@ -15,7 +15,16 @@ namespace Account.WebApi.Profiles
         {
             CreateMap<AccountModel, AccountDTO>();
             CreateMap<AccountDTO, AccountModel>();
-            CreateMap<AccountModel, AccountEntity>();
+            CreateMap<AccountEntity, AccountModel>()
+                .ForPath(dest => dest.FirstName, option => option.MapFrom
+                   (src => src.Customer.FirstName))
+                .ForPath(dest => dest.LastName, option => option.MapFrom
+                   (src => src.Customer.LastName));
+            CreateMap<AccountModel, AccountEntity>()
+               .ForPath(dest => dest.Customer.FirstName, option => option.MapFrom
+                   (src => src.FirstName))
+                 .ForPath(dest => dest.Customer.LastName, option => option.MapFrom
+                   (src => src.LastName));
             CreateMap<AccountEntity, AccountModel>();
         }
     }

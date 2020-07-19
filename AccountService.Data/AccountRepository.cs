@@ -14,20 +14,26 @@ namespace Account.Data
     {
         private readonly IMapper _mapper;
         private readonly AccountContext _accountContext;
-        public Task<bool> CreateAccountAsync(CreateAccountModel createAccountModel)
+        public AccountRepository(IMapper mapper,AccountContext accountContext)
         {
-            throw new NotImplementedException();
+            _accountContext = accountContext;
+            _mapper = mapper;
         }
-
         public async Task<AccountModel> GetAccountInfoAsync(Guid CustomerId)
         {
-            AccountEntity accountEntity = await _accountContext.Accounts
-                .FirstOrDefaultAsync(a => a.CustomerId == CustomerId);
-            if (accountEntity != null)
+            try
             {
-                ///
-                ///
-                ///
+                AccountEntity accountEntity = await _accountContext.Accounts
+                                .FirstOrDefaultAsync(a => a.CustomerId.ToString()==(CustomerId.ToString().ToUpper()));
+                AccountModel accountModel = _mapper.Map<AccountModel>(accountEntity);
+                return accountModel;
+
+            }
+            
+         catch(Exception ex)
+            {
+                return null;
+            }
                 ///check fi we need it
                 //AccountModel accountModel = new AccountModel()
                 //{
@@ -36,16 +42,11 @@ namespace Account.Data
                 //    FirstName = accountEntity.Customer.FirstName,
                 //    LastName = accountEntity.Customer.LastName
                 //};
-                AccountModel accountModel = _mapper.Map<AccountModel>(accountEntity);
-                return accountModel;
-            }
-            else
-                return null;
+
+            
+
         }
 
-        public Task<Guid> LoginAsync(LoginModel loginModel)
-        {
-            throw new NotImplementedException();
-        }
+
     }
 }
