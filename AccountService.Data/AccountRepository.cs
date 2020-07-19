@@ -9,19 +9,13 @@ namespace Account.Data
 {
     public class AccountRepository : IAccountRepository
     {
-        public Task<bool> CreateAccountAsync(CreateAccountModel createAccountModel)
-        {
-            throw new NotImplementedException();
-        }
+        
 
         public Task<AccountModel> GetAccountInfoAsync(Guid CustomerId)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Guid> LoginAsync(loginModel loginModel)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

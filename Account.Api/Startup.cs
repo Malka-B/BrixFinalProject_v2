@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Account.Data;
+using Account.Service;
+using Account.Service.Intefaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -25,14 +27,25 @@ namespace Account.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            ///
-            ///
-            //לא טפלתי בתיקיה של 
-            //WWWROOT
-            //services.AddRazorPages();
+            services.AddScoped<ILoginService, LoginService>();
+            services.AddScoped<ILoginRepository, LoginRepository>();
+
             services.AddDbContext<AccountContext>(options =>
                           options.UseSqlServer(
                               Configuration.GetConnectionString("FinalProject_Account")));
+
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(
+                       builder =>
+                       {
+                           builder.AllowAnyOrigin()
+                                  .AllowAnyHeader()
+                                  .AllowAnyMethod()
+                                  .WithExposedHeaders("X-Pagination");
+                       });
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

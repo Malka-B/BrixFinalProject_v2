@@ -8,8 +8,7 @@ namespace Account.Service.Intefaces
 {
     public interface IAccountRepository
     {
-        Task<bool> CreateAccountAsync(CreateAccountModel createAccountModel);
-        Task<Guid> LoginAsync(loginModel loginModel);
+        
         Task<AccountModel> GetAccountInfoAsync(Guid CustomerId);
     }
 }
