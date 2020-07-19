@@ -13,20 +13,33 @@ namespace Account.Service
             _loginRepository = loginRepository;
         }
 
-        public async Task<bool> CreateAccountAsync(CreateAccountModel createAccountModel)
-        {
-            bool isEmailValid = await _loginRepository.IsEmailValidAsync(createAccountModel.Email);
-            if (isEmailValid)
-            {
-                return await _loginRepository.CreateAccountAsync(createAccountModel);
-            }
-
-            return false;
-        }
+       
 
         public async Task<Guid> LoginAsync(string email, string password)
         {
-            return await _loginRepository.LoginAsync(email, password);
+            string passwordAsHashCode = password.GetHashCode().ToString();
+            return await _loginRepository.LoginAsync(email, passwordAsHashCode);
+        }
+
+        public async Task<bool> RegisterAsync(CustomerModel customerModel)
+        {
+            bool isEmailValid = await _loginRepository.IsEmailValidAsync(customerModel.Email);
+            if (isEmailValid)
+            {
+                customerModel.Id = Guid.NewGuid();
+                customerModel.Password = (customerModel.Password.GetHashCode()).ToString();
+
+                AccountRegisterModel account = new AccountRegisterModel
+                {
+                    Id = Guid.NewGuid(),
+                    CustomerId = customerModel.Id,
+                    Balance = 1000,
+                    OpenDate = DateTime.Now
+                };
+                return await _loginRepository.RegisterAsync(customerModel, account);
+            }
+
+            return false;
         }
     }
 }

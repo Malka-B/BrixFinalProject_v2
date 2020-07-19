@@ -14,9 +14,11 @@ namespace Account.Data
     {
         private readonly IMapper _mapper;
         private readonly AccountContext _accountContext;
-        public Task<bool> CreateAccountAsync(CreateAccountModel createAccountModel)
+
+        public AccountRepository(IMapper mapper, AccountContext accountContext)
         {
-            throw new NotImplementedException();
+            _mapper = mapper;
+            _accountContext = accountContext;
         }
 
         public async Task<AccountModel> GetAccountInfoAsync(Guid CustomerId)
@@ -43,9 +45,6 @@ namespace Account.Data
                 return null;
         }
 
-        public Task<Guid> LoginAsync(LoginModel loginModel)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }

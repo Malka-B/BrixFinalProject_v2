@@ -6,7 +6,8 @@ namespace Account.Service.Intefaces
 {
     public interface ILoginService
     {
-        Task<bool> CreateAccountAsync(CreateAccountModel createAccountModel);
+        
         Task<Guid> LoginAsync(string email, string password);
+        Task<bool> RegisterAsync(CustomerModel customerModel);
     }
 }

@@ -10,6 +10,7 @@ using Account.Data.Entites;
 namespace Account.WebApi.Profiles
 {
     public class AccountProfile : Profile
+
     {
         public AccountProfile()
         {
@@ -17,6 +18,14 @@ namespace Account.WebApi.Profiles
             CreateMap<AccountDTO, AccountModel>();
             CreateMap<AccountModel, AccountEntity>();
             CreateMap<AccountEntity, AccountModel>();
+            CreateMap<CustomerModel, CustomerDTO>();
+            CreateMap<CustomerDTO, CustomerModel>();
+            CreateMap<CustomerModel, CustomerEntity>();
+            CreateMap<CustomerEntity, CustomerModel>();
+            CreateMap<AccountRegisterModel, AccountEntity>();
+            
+
+
         }
     }
 }

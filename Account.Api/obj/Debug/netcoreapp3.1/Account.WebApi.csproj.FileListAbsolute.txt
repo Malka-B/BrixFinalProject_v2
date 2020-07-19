@@ -315,8 +315,6 @@ C:\Users\User\Desktop\BrixFinalProject\Brix_FinalProject\Account.Api\bin\Debug\n
 C:\Users\User\Desktop\BrixFinalProject\Brix_FinalProject\Account.Api\obj\Debug\netcoreapp3.1\Account.WebApi.csprojAssemblyReference.cache
 C:\Users\User\Desktop\BrixFinalProject\Brix_FinalProject\Account.Api\obj\Debug\netcoreapp3.1\Account.WebApi.AssemblyInfoInputs.cache
 C:\Users\User\Desktop\BrixFinalProject\Brix_FinalProject\Account.Api\obj\Debug\netcoreapp3.1\Account.WebApi.AssemblyInfo.cs
-C:\Users\User\Desktop\BrixFinalProject\Brix_FinalProject\Account.Api\obj\Debug\netcoreapp3.1\Account.WebApi.csproj.CoreCompileInputs.cache
-C:\Users\User\Desktop\BrixFinalProject\Brix_FinalProject\Account.Api\obj\Debug\netcoreapp3.1\Account.WebApi.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\User\Desktop\BrixFinalProject\Brix_FinalProject\Account.Api\obj\Debug\netcoreapp3.1\Account.WebApi.RazorTargetAssemblyInfo.cache
 C:\Users\User\Desktop\BrixFinalProject\Brix_FinalProject\Account.Api\obj\Debug\netcoreapp3.1\Account.WebApi.csproj.CopyComplete
 C:\Users\User\Desktop\BrixFinalProject\Brix_FinalProject\Account.Api\obj\Debug\netcoreapp3.1\staticwebassets\Account.WebApi.StaticWebAssets.Manifest.cache
@@ -324,3 +322,10 @@ C:\Users\User\Desktop\BrixFinalProject\Brix_FinalProject\Account.Api\obj\Debug\n
 C:\Users\User\Desktop\BrixFinalProject\Brix_FinalProject\Account.Api\obj\Debug\netcoreapp3.1\Account.WebApi.dll
 C:\Users\User\Desktop\BrixFinalProject\Brix_FinalProject\Account.Api\obj\Debug\netcoreapp3.1\Account.WebApi.pdb
 C:\Users\User\Desktop\BrixFinalProject\Brix_FinalProject\Account.Api\obj\Debug\netcoreapp3.1\Account.WebApi.genruntimeconfig.cache
+C:\Users\User\Desktop\BrixFinalProject\Brix_FinalProject\Account.Api\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\User\Desktop\BrixFinalProject\Brix_FinalProject\Account.Api\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\User\Desktop\BrixFinalProject\Brix_FinalProject\Account.Api\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\User\Desktop\BrixFinalProject\Brix_FinalProject\Account.Api\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\User\Desktop\BrixFinalProject\Brix_FinalProject\Account.Api\obj\Debug\netcoreapp3.1\Account.WebApi.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\BrixFinalProject\Brix_FinalProject\Account.Api\obj\Debug\netcoreapp3.1\Account.WebApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\User\Desktop\BrixFinalProject\Brix_FinalProject\Account.Api\obj\Debug\netcoreapp3.1\Account.WebApi.MvcApplicationPartsAssemblyInfo.cache
