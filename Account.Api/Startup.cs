@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Account.Data;
+using Account.Service;
+using Account.Service.Intefaces;
+using Account.WebApi.Profiles;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -30,9 +34,20 @@ namespace Account.Api
             //לא טפלתי בתיקיה של 
             //WWWROOT
             //services.AddRazorPages();
+            services.AddScoped<IAccountRepository, AccountRepository>();
+            services.AddScoped<IAccountService, AccountService>();
             services.AddDbContext<AccountContext>(options =>
                           options.UseSqlServer(
                               Configuration.GetConnectionString("FinalProject_Account")));
+
+            var mappingConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new AccountProfile());
+            });
+
+            IMapper mapper = mappingConfig.CreateMapper();
+            services.AddSingleton(mapper);
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

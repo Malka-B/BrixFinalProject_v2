@@ -9,17 +9,22 @@ namespace Account.Service
 {
     public class AccountService : IAccountService
     {
+        IAccountRepository _accountRepository;
+        public AccountService(IAccountRepository accountRepository)
+        {
+            _accountRepository = accountRepository;
+        }
         public Task<bool> CreateAccountAsync(CreateAccountModel createAccountModel)
         {
             throw new NotImplementedException();
         }
 
-        public Task<AccountModel> GetAccountInfoAsync(Guid CustomerId)
+        public async Task<AccountModel> GetAccountInfoAsync(Guid CustomerId)
         {
-            throw new NotImplementedException();
+            return await _accountRepository.GetAccountInfoAsync(CustomerId);
         }
 
-        public Task<Guid> LoginAsync(loginModel loginModel)
+        public Task<Guid> LoginAsync(LoginModel loginModel)
         {
             throw new NotImplementedException();
         }

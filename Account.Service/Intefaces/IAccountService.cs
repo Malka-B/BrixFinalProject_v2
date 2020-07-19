@@ -9,7 +9,7 @@ namespace Account.Service.Intefaces
     public interface IAccountService
     {
         Task<bool> CreateAccountAsync(CreateAccountModel createAccountModel);
-        Task<Guid> LoginAsync(loginModel loginModel);
+        Task<Guid> LoginAsync(LoginModel loginModel);
         Task<AccountModel> GetAccountInfoAsync(Guid CustomerId);
     }
 }
