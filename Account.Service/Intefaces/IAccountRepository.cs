@@ -8,7 +8,6 @@ namespace Account.Service.Intefaces
 {
     public interface IAccountRepository
     {
-        
         Task<AccountModel> GetAccountInfoAsync(Guid CustomerId);
     }
 }

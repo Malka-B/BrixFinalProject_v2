@@ -22,11 +22,14 @@ namespace Account.WebApi.Controllers
             _accountService = accountService;
             _mapper = mapper;
         }
-        [HttpGet]
-        public async Task<AccountDTO> Get([FromQuery] Guid guid)
+        [HttpGet("GetAccountInfo")]
+        public async Task<AccountDTO> Get([FromQuery]string guid)
         {
-            AccountModel accountModel = await _accountService.GetAccountInfoAsync(guid);
+            Guid guid1 =Guid.Parse(guid);
+        //    guid1.ToString().ToUpper();
+            AccountModel accountModel = await _accountService.GetAccountInfoAsync(guid1);
             return _mapper.Map<AccountDTO>(accountModel);
+
         }
     }
 }
