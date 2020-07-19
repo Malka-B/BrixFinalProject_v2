@@ -1,0 +1,9 @@
+C:\Users\WIN10\source\repos\Brix final project\Account.Service\bin\Debug\netcoreapp3.1\Account.Service.deps.json
+C:\Users\WIN10\source\repos\Brix final project\Account.Service\bin\Debug\netcoreapp3.1\Account.Service.dll
+C:\Users\WIN10\source\repos\Brix final project\Account.Service\bin\Debug\netcoreapp3.1\Account.Service.pdb
+C:\Users\WIN10\source\repos\Brix final project\Account.Service\obj\Debug\netcoreapp3.1\Account.Service.csprojAssemblyReference.cache
+C:\Users\WIN10\source\repos\Brix final project\Account.Service\obj\Debug\netcoreapp3.1\Account.Service.csproj.CoreCompileInputs.cache
+C:\Users\WIN10\source\repos\Brix final project\Account.Service\obj\Debug\netcoreapp3.1\Account.Service.AssemblyInfoInputs.cache
+C:\Users\WIN10\source\repos\Brix final project\Account.Service\obj\Debug\netcoreapp3.1\Account.Service.AssemblyInfo.cs
+C:\Users\WIN10\source\repos\Brix final project\Account.Service\obj\Debug\netcoreapp3.1\Account.Service.dll
+C:\Users\WIN10\source\repos\Brix final project\Account.Service\obj\Debug\netcoreapp3.1\Account.Service.pdb
