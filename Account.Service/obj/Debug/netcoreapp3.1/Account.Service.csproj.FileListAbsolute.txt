@@ -7,3 +7,12 @@ C:\Users\WIN10\source\repos\Brix final project\Account.Service\obj\Debug\netcore
 C:\Users\WIN10\source\repos\Brix final project\Account.Service\obj\Debug\netcoreapp3.1\Account.Service.AssemblyInfo.cs
 C:\Users\WIN10\source\repos\Brix final project\Account.Service\obj\Debug\netcoreapp3.1\Account.Service.dll
 C:\Users\WIN10\source\repos\Brix final project\Account.Service\obj\Debug\netcoreapp3.1\Account.Service.pdb
+F:\Brix\Brix final project\Account.Service\bin\Debug\netcoreapp3.1\Account.Service.deps.json
+F:\Brix\Brix final project\Account.Service\bin\Debug\netcoreapp3.1\Account.Service.dll
+F:\Brix\Brix final project\Account.Service\bin\Debug\netcoreapp3.1\Account.Service.pdb
+F:\Brix\Brix final project\Account.Service\obj\Debug\netcoreapp3.1\Account.Service.csprojAssemblyReference.cache
+F:\Brix\Brix final project\Account.Service\obj\Debug\netcoreapp3.1\Account.Service.csproj.CoreCompileInputs.cache
+F:\Brix\Brix final project\Account.Service\obj\Debug\netcoreapp3.1\Account.Service.AssemblyInfoInputs.cache
+F:\Brix\Brix final project\Account.Service\obj\Debug\netcoreapp3.1\Account.Service.AssemblyInfo.cs
+F:\Brix\Brix final project\Account.Service\obj\Debug\netcoreapp3.1\Account.Service.dll
+F:\Brix\Brix final project\Account.Service\obj\Debug\netcoreapp3.1\Account.Service.pdb
