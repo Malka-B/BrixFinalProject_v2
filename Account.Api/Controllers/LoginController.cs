@@ -35,7 +35,6 @@ namespace Account.WebApi.Controllers
         [HttpPost("register")]
         public async Task<ActionResult<bool>> RegisterAsync([FromBody] CustomerDTO customer)
         {
-
             CustomerModel customerModel = _mapper.Map<CustomerModel>(customer);
             var response = await _loginService.RegisterAsync(customerModel);
             if (response)
@@ -43,7 +42,6 @@ namespace Account.WebApi.Controllers
                 return Ok(response);
             }
             return BadRequest(false);
-
         }
     }
 }

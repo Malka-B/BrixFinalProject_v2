@@ -1,5 +1,6 @@
 ﻿using Account.Service.Intefaces;
 using Account.Service.Models;
+using Exceptions;
 using System;
 using System.Threading.Tasks;
 
@@ -12,8 +13,6 @@ namespace Account.Service
         {
             _loginRepository = loginRepository;
         }
-
-       
 
         public async Task<Guid> LoginAsync(string email, string password)
         {

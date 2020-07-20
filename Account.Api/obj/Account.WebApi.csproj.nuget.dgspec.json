@@ -121,7 +121,11 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "F:\\Brix\\Brix final project\\Exceptions\\Exceptions.csproj": {
+                "projectPath": "F:\\Brix\\Brix final project\\Exceptions\\Exceptions.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

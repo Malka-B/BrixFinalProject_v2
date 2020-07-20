@@ -2,6 +2,7 @@
 using Account.Service.Intefaces;
 using Account.Service.Models;
 using AutoMapper;
+using Exceptions;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Threading.Tasks;
@@ -44,34 +45,14 @@ namespace Account.Data
 
         public async Task<Guid> LoginAsync(string email, string password)
         {
-            //try
-            //{
-            //    var customer = await _accountContext.Customers
-            //        .FirstOrDefaultAsync(c => c.Email == email
-            //                               && c.Password == password);
-
-            //    if (customer != null)
-            //    {
-            //        return customer.Id;
-            //    }
-            //    else
-            //    {
-            //        return default;
-            //    }
-            //}
-            //catch (Exception e)
-            //{
-            //    throw new Exception();
-            //}
-
             try
             {
                 CustomerEntity customer = await _accountContext.Customers
                      .FirstOrDefaultAsync(c => c.Email == email
-                                            && c.Password == password);                
-                    return customer.Id;                
+                                            && c.Password == password);
+                    return customer.Id;
             }
-            catch
+            catch (Exception)
             {
                 throw new SystemException();
             }
