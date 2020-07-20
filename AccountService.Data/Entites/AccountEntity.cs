@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Account.Data.Entites
 {
@@ -10,6 +8,6 @@ namespace Account.Data.Entites
         public Guid CustomerId { get; set; }
         public virtual CustomerEntity  Customer { get; set; }
         public DateTime OpenDate { get; set; }
-        public float Balance { get; set; }
+        public int Balance { get; set; }
     }
 }

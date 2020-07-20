@@ -1310,6 +1310,16 @@
         "runtime": {
           "bin/placeholder/Account.Service.dll": {}
         }
+      },
+      "Exceptions/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Exceptions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Exceptions.dll": {}
+        }
       }
     }
   },
@@ -5029,6 +5039,11 @@
       "type": "project",
       "path": "../Account.Service/Account.Service.csproj",
       "msbuildProject": "../Account.Service/Account.Service.csproj"
+    },
+    "Exceptions/1.0.0": {
+      "type": "project",
+      "path": "../Exceptions/Exceptions.csproj",
+      "msbuildProject": "../Exceptions/Exceptions.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5036,6 +5051,7 @@
       "Account.Service >= 1.0.0",
       "AutoMapper >= 10.0.0",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.0.1",
+      "Exceptions >= 1.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.6",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.6",
       "Microsoft.Extensions.DependencyInjection >= 3.1.6"
@@ -5074,6 +5090,9 @@
           "projectReferences": {
             "F:\\Brix\\Brix final project\\Account.Service\\Account.Service.csproj": {
               "projectPath": "F:\\Brix\\Brix final project\\Account.Service\\Account.Service.csproj"
+            },
+            "F:\\Brix\\Brix final project\\Exceptions\\Exceptions.csproj": {
+              "projectPath": "F:\\Brix\\Brix final project\\Exceptions\\Exceptions.csproj"
             }
           }
         }
