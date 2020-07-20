@@ -1,6 +1,7 @@
 ﻿using Account.Data.Entites;
 using Account.Service.Intefaces;
 using Account.Service.Models;
+using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Threading.Tasks;
@@ -10,9 +11,12 @@ namespace Account.Data
     public class LoginRepository : ILoginRepository
     {
         private readonly AccountContext _accountContext;
-        public LoginRepository(AccountContext accountContext)
+        private readonly IMapper _mapper;
+
+        public LoginRepository(AccountContext accountContext, IMapper mapper)
         {
             _accountContext = accountContext;
+            _mapper = mapper;
         }
 
         public async Task<bool> IsEmailValidAsync(string email)
@@ -24,20 +28,15 @@ namespace Account.Data
                 return false;
             }
             return true;
-        }
-
-        public async Task<bool> CreateAccountAsync(CreateAccountModel createAccountModel)
-        {
-            
-        }
+        }       
 
         public async Task<Guid> LoginAsync(string email, string password)
         {
             try
             {
-                var customer = await _accountContext.Customers.FirstOrDefaultAsync(c =>
-            c.Email == email &&
-            c.Passowrd == password);
+                var customer = await _accountContext.Customers
+                    .FirstOrDefaultAsync(c => c.Email == email 
+                                           && c.Password == password);
 
                 if (customer != null)
                 {
@@ -53,6 +52,26 @@ namespace Account.Data
                 throw new Exception();
             }      
             
+        }
+
+        public async Task<bool> RegisterAsync(CustomerModel customerModel, AccountRegisterModel accountRegisterModel)
+        {
+            try
+            {
+                CustomerEntity customer = _mapper.Map<CustomerEntity>(customerModel);
+                AccountEntity account = _mapper.Map<AccountEntity>(accountRegisterModel);
+
+                await _accountContext.Customers.AddAsync(customer);
+                await _accountContext.Accounts.AddAsync(account);
+                await _accountContext.SaveChangesAsync();
+
+                return true;
+            }
+            catch (Exception e)
+            {
+                throw new Exception();
+            }
+
         }
     }
 }

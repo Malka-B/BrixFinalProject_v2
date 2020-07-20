@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Account.Data.Entites
+namespace Account.Service.Models
 {
-    public class CustomerEntity
+    public class CustomerModel
     {
         public Guid Id { get; set; }
         public string FirstName { get; set; }

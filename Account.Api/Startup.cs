@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Account.Data;
 using Account.Service;
 using Account.Service.Intefaces;
@@ -9,7 +5,6 @@ using Account.WebApi.Profiles;
 using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -29,13 +24,9 @@ namespace Account.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            ///
-            ///
-            //לא טפלתי בתיקיה של 
-            //WWWROOT
-            services.AddRazorPages();
-            services.AddControllers();
+            services.AddScoped<ILoginRepository, LoginRepository>();
             services.AddScoped<IAccountRepository, AccountRepository>();
+            services.AddScoped<ILoginService, LoginService>();
             services.AddScoped<IAccountService, AccountService>();
             services.AddDbContext<AccountContext>(options =>
                           options.UseSqlServer(
@@ -48,6 +39,23 @@ namespace Account.Api
 
             IMapper mapper = mappingConfig.CreateMapper();
             services.AddSingleton(mapper);
+
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(
+                       builder =>
+                       {
+                           builder.AllowAnyOrigin()
+                                  .AllowAnyHeader()
+                                  .AllowAnyMethod()
+                                  .WithExposedHeaders("X-Pagination");
+                       });
+            });
+
+            services.AddControllers();
+            services.AddMvc();
+            services.AddAuthorization();
+
             services.AddSwaggerGen(setupAction =>
             {
                 setupAction.SwaggerDoc(
@@ -67,18 +75,17 @@ namespace Account.Api
             {
                 app.UseDeveloperExceptionPage();
             }
-            else
-            {
-                app.UseExceptionHandler("/Error");
-;
-            }
+            
+            
 
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
            
             app.UseRouting();
 
+            app.UseCors();
+
             app.UseSwagger();
+
             app.UseSwaggerUI(setupAction =>
             {
                 setupAction.SwaggerEndpoint(
@@ -86,7 +93,8 @@ namespace Account.Api
                     "Bank API"
                     );
             });
-            //app.UseAuthorization();
+
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
