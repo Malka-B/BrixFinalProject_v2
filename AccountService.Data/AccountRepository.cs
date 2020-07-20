@@ -24,7 +24,8 @@ namespace Account.Data
             try
             {
                 AccountEntity accountEntity = await _accountContext.Accounts
-                                .FirstOrDefaultAsync(a => a.CustomerId.ToString()==(CustomerId.ToString().ToUpper()));
+                    .Include(a => a.Customer)
+                    .FirstOrDefaultAsync(a => a.CustomerId.ToString()==(CustomerId.ToString().ToUpper()));
                 AccountModel accountModel = _mapper.Map<AccountModel>(accountEntity);
                 return accountModel;
 

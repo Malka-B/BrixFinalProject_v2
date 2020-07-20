@@ -25,8 +25,8 @@ namespace Account.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<float>("Balance")
-                        .HasColumnType("real");
+                    b.Property<int>("Balance")
+                        .HasColumnType("int");
 
                     b.Property<Guid>("CustomerId")
                         .HasColumnType("uniqueidentifier");

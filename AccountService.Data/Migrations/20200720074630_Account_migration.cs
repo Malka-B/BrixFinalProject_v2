@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Account.Data.Migrations
 {
-    public partial class initial_migration : Migration
+    public partial class Account_migration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -29,7 +29,7 @@ namespace Account.Data.Migrations
                     Id = table.Column<Guid>(nullable: false),
                     CustomerId = table.Column<Guid>(nullable: false),
                     OpenDate = table.Column<DateTime>(nullable: false),
-                    Balance = table.Column<float>(nullable: false)
+                    Balance = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
