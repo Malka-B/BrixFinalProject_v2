@@ -32,11 +32,13 @@ namespace Account.Service
             bool isEmailValid = await _loginRepository.IsEmailValidAsync(customerModel.Email);
             if (isEmailValid)
             {
+                string passowrdSalt = Hashing.GetSalt();
                 customerModel.Id = Guid.NewGuid();
-                customerModel.Password = (customerModel.Password.GetHashCode()).ToString();
-
-                AccountRegisterModel account = new AccountRegisterModel
+                AccountRegisterModel account = new AccountRegisterModel()
                 {
+                   
+                    PassowrdSalt = passowrdSalt,
+                    PasswordHash = Hashing.GenerateHash(customerModel.Password, passowrdSalt),
                     Id = Guid.NewGuid(),
                     CustomerId = customerModel.Id,
                     Balance = 1000,

@@ -16,15 +16,15 @@ C:\Users\User\Desktop\BrixFinalProject\Brix_FinalProject\Account.Service\obj\Deb
 C:\Users\User\Desktop\BrixFinalProject\Brix_FinalProject\Account.Service\obj\Debug\netcoreapp3.1\Account.Service.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\BrixFinalProject\Brix_FinalProject\Account.Service\obj\Debug\netcoreapp3.1\Account.Service.dll
 C:\Users\User\Desktop\BrixFinalProject\Brix_FinalProject\Account.Service\obj\Debug\netcoreapp3.1\Account.Service.pdb
-F:\Brix\Brix final project\Account.Service\obj\Debug\netcoreapp3.1\Account.Service.csprojAssemblyReference.cache
-F:\Brix\Brix final project\Account.Service\obj\Debug\netcoreapp3.1\Account.Service.csproj.CoreCompileInputs.cache
-F:\Brix\Brix final project\Account.Service\obj\Debug\netcoreapp3.1\Account.Service.AssemblyInfoInputs.cache
-F:\Brix\Brix final project\Account.Service\obj\Debug\netcoreapp3.1\Account.Service.AssemblyInfo.cs
 F:\Brix\Brix final project\Account.Service\bin\Debug\netcoreapp3.1\Account.Service.deps.json
 F:\Brix\Brix final project\Account.Service\bin\Debug\netcoreapp3.1\Account.Service.dll
 F:\Brix\Brix final project\Account.Service\bin\Debug\netcoreapp3.1\Account.Service.pdb
 F:\Brix\Brix final project\Account.Service\bin\Debug\netcoreapp3.1\Exceptions.dll
 F:\Brix\Brix final project\Account.Service\bin\Debug\netcoreapp3.1\Exceptions.pdb
+F:\Brix\Brix final project\Account.Service\obj\Debug\netcoreapp3.1\Account.Service.csprojAssemblyReference.cache
+F:\Brix\Brix final project\Account.Service\obj\Debug\netcoreapp3.1\Account.Service.csproj.CoreCompileInputs.cache
+F:\Brix\Brix final project\Account.Service\obj\Debug\netcoreapp3.1\Account.Service.AssemblyInfoInputs.cache
+F:\Brix\Brix final project\Account.Service\obj\Debug\netcoreapp3.1\Account.Service.AssemblyInfo.cs
 F:\Brix\Brix final project\Account.Service\obj\Debug\netcoreapp3.1\Account.Service.csproj.CopyComplete
 F:\Brix\Brix final project\Account.Service\obj\Debug\netcoreapp3.1\Account.Service.dll
 F:\Brix\Brix final project\Account.Service\obj\Debug\netcoreapp3.1\Account.Service.pdb

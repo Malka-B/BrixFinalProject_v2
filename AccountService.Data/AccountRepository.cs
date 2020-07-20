@@ -23,11 +23,11 @@ namespace Account.Data
         {
             try
             {
-                AccountEntity accountEntity = await _accountContext.Accounts
-                                .FirstOrDefaultAsync(a => a.CustomerId.ToString() == (CustomerId.ToString().ToUpper()));
+                AccountEntity accountEntity = await _accountContext.Accounts.Include(c=>c.Customer)
+                                .FirstOrDefaultAsync(a => a.CustomerId == CustomerId);
                 if (accountEntity != null)
                 {
-                    AccountModel accountModel = _mapper.Map<AccountModel>(accountEntity);
+                     AccountModel accountModel = _mapper.Map<AccountModel>(accountEntity);
                     return accountModel;
                 }
                 else
@@ -37,7 +37,7 @@ namespace Account.Data
             {
                 throw ex;
             }
-            catch(Exception)
+            catch(Exception ex)
             {
                 throw new SystemException();
             }
