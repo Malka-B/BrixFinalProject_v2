@@ -34,35 +34,63 @@ namespace Account.Data
         public async Task<bool> IsCustomerExistAsync(string email, string password)
         {
             CustomerEntity customer = await _accountContext.Customers
-                    .FirstOrDefaultAsync(c => c.Email == email
-                                           && c.Password == password);
+             .FirstOrDefaultAsync(c => c.Email == email);
             if (customer != null)
             {
-                return true;
+                byte[] passwordHash, passwordSalt;
+                passwordHash = customer.PasswordHash;
+                passwordSalt = customer.PassowrdSalt;
+                if (VerifyPassword(password, passwordHash, passwordSalt))
+                    return true;
+                return false;
             }
-            return false;
+            else
+                return false;
         }
 
-        public async Task<Guid> LoginAsync(string email, string password)
+        public async Task<Guid> LoginAsync(string email)
         {
             try
             {
                 CustomerEntity customer = await _accountContext.Customers
-                     .FirstOrDefaultAsync(c => c.Email == email
-                                            && c.Password == password);
-                    return customer.Id;
+             .FirstOrDefaultAsync(c => c.Email == email);
+                return customer.Id;
             }
             catch (Exception)
             {
                 throw new SystemException();
             }
         }
+        private bool VerifyPassword(string password, byte[] passwordHash, byte[] passwordSalt)
+        {
+            using (var hmac = new System.Security.Cryptography.HMACSHA512(passwordSalt))
+            {
+                var computedHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password)); // Create hash using password salt.
+                for (int i = 0; i < computedHash.Length; i++)
+                {
+                    if (computedHash[i] != passwordHash[i]) return false;
+                }
+            }
+            return true;
+        }
 
         public async Task<bool> RegisterAsync(CustomerModel customerModel, AccountRegisterModel accountRegisterModel)
         {
+            byte[] passwordHash, passwordSalt;
+            string passowrd = customerModel.Password;
+            CreatePasswordHash(passowrd, out passwordHash, out passwordSalt);
             try
             {
-                CustomerEntity customer = _mapper.Map<CustomerEntity>(customerModel);
+                //  CustomerEntity customer = _mapper.Map<CustomerEntity>(customerModel);
+                CustomerEntity customer = new CustomerEntity()
+                {
+                    PasswordHash = passwordHash,
+                    PassowrdSalt = passwordSalt,
+                    Email = customerModel.Email,
+                    FirstName = customerModel.FirstName,
+                    LastName = customerModel.LastName,
+                    Id = customerModel.Id
+                };
                 AccountEntity account = _mapper.Map<AccountEntity>(accountRegisterModel);
                 await _accountContext.Customers.AddAsync(customer);
                 await _accountContext.Accounts.AddAsync(account);
@@ -74,5 +102,15 @@ namespace Account.Data
                 throw new SystemException();
             }
         }
+
+        private void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
+        {
+            using (var hmac = new System.Security.Cryptography.HMACSHA512())
+            {
+                passwordSalt = hmac.Key;
+                passwordHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
+            }
+        }
     }
 }
+
