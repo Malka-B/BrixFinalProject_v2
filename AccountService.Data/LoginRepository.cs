@@ -28,30 +28,53 @@ namespace Account.Data
                 return false;
             }
             return true;
-        }       
+        }
+
+        public async Task<bool> IsCustomerExistAsync(string email, string password)
+        {
+            CustomerEntity customer = await _accountContext.Customers
+                    .FirstOrDefaultAsync(c => c.Email == email
+                                           && c.Password == password);
+            if (customer != null)
+            {
+                return true;
+            }
+            return false;
+        }
 
         public async Task<Guid> LoginAsync(string email, string password)
         {
+            //try
+            //{
+            //    var customer = await _accountContext.Customers
+            //        .FirstOrDefaultAsync(c => c.Email == email
+            //                               && c.Password == password);
+
+            //    if (customer != null)
+            //    {
+            //        return customer.Id;
+            //    }
+            //    else
+            //    {
+            //        return default;
+            //    }
+            //}
+            //catch (Exception e)
+            //{
+            //    throw new Exception();
+            //}
+
             try
             {
-                var customer = await _accountContext.Customers
-                    .FirstOrDefaultAsync(c => c.Email == email 
-                                           && c.Password == password);
-
-                if (customer != null)
-                {
-                    return customer.Id;
-                }
-                else
-                {
-                    return default;
-                }
+                CustomerEntity customer = await _accountContext.Customers
+                     .FirstOrDefaultAsync(c => c.Email == email
+                                            && c.Password == password);                
+                    return customer.Id;                
             }
-            catch(Exception e)
+            catch
             {
-                throw new Exception();
-            }      
-            
+                throw new SystemException();
+            }
         }
 
         public async Task<bool> RegisterAsync(CustomerModel customerModel, AccountRegisterModel accountRegisterModel)
@@ -60,18 +83,15 @@ namespace Account.Data
             {
                 CustomerEntity customer = _mapper.Map<CustomerEntity>(customerModel);
                 AccountEntity account = _mapper.Map<AccountEntity>(accountRegisterModel);
-
                 await _accountContext.Customers.AddAsync(customer);
                 await _accountContext.Accounts.AddAsync(account);
                 await _accountContext.SaveChangesAsync();
-
                 return true;
             }
-            catch (Exception e)
+            catch
             {
-                throw new Exception();
+                throw new SystemException();
             }
-
         }
     }
 }

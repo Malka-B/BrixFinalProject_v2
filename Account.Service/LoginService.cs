@@ -18,7 +18,16 @@ namespace Account.Service
         public async Task<Guid> LoginAsync(string email, string password)
         {
             string passwordAsHashCode = password.GetHashCode().ToString();
-            return await _loginRepository.LoginAsync(email, passwordAsHashCode);
+            bool isCustomerExist = await _loginRepository.IsCustomerExistAsync(email, passwordAsHashCode);
+            if (isCustomerExist)
+            {
+                return await _loginRepository.LoginAsync(email, passwordAsHashCode);
+            }
+            else
+            {
+                throw new AccountNotFoundException();
+            }
+            
         }
 
         public async Task<bool> RegisterAsync(CustomerModel customerModel)
@@ -38,8 +47,11 @@ namespace Account.Service
                 };
                 return await _loginRepository.RegisterAsync(customerModel, account);
             }
-
-            return false;
+            else
+            {
+                throw new DuplicateEmailException();
+            }
+            
         }
     }
 }

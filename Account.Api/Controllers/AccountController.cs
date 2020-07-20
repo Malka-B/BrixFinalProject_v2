@@ -25,8 +25,7 @@ namespace Account.WebApi.Controllers
         [HttpGet("GetAccountInfo")]
         public async Task<AccountDTO> Get([FromQuery]string guid)
         {
-            Guid guid1 =Guid.Parse(guid);
-        //    guid1.ToString().ToUpper();
+            Guid guid1 =Guid.Parse(guid);        
             AccountModel accountModel = await _accountService.GetAccountInfoAsync(guid1);
             return _mapper.Map<AccountDTO>(accountModel);
 

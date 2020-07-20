@@ -17,16 +17,11 @@ namespace Account.WebApi.Profiles
             CreateMap<AccountModel, AccountDTO>();
             CreateMap<AccountDTO, AccountModel>();
             CreateMap<AccountEntity, AccountModel>()
-                .ForPath(dest => dest.FirstName, option => option.MapFrom
-                   (src => src.Customer.FirstName))
-                .ForPath(dest => dest.LastName, option => option.MapFrom
-                   (src => src.Customer.LastName));
-            CreateMap<AccountModel, AccountEntity>()
-               .ForPath(dest => dest.Customer.FirstName, option => option.MapFrom
-                   (src => src.FirstName))
-                 .ForPath(dest => dest.Customer.LastName, option => option.MapFrom
-                   (src => src.LastName));
-            CreateMap<AccountEntity, AccountModel>();
+             .ForMember(destination => destination.FirstName, option => option.MapFrom(src =>
+             src.Customer.FirstName))
+             .ForMember(destination => destination.LastName, option => option.MapFrom(src =>
+              src.Customer.LastName));          
+           
             CreateMap<CustomerModel, CustomerDTO>();
             CreateMap<CustomerDTO, CustomerModel>();
             CreateMap<CustomerModel, CustomerEntity>();
