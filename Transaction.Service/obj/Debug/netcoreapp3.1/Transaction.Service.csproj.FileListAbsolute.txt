@@ -1,0 +1,8 @@
+F:\Brix\Brix final project\Transaction.Service\bin\Debug\netcoreapp3.1\Transaction.Service.deps.json
+F:\Brix\Brix final project\Transaction.Service\bin\Debug\netcoreapp3.1\Transaction.Service.dll
+F:\Brix\Brix final project\Transaction.Service\bin\Debug\netcoreapp3.1\Transaction.Service.pdb
+F:\Brix\Brix final project\Transaction.Service\obj\Debug\netcoreapp3.1\Transaction.Service.csproj.CoreCompileInputs.cache
+F:\Brix\Brix final project\Transaction.Service\obj\Debug\netcoreapp3.1\Transaction.Service.AssemblyInfoInputs.cache
+F:\Brix\Brix final project\Transaction.Service\obj\Debug\netcoreapp3.1\Transaction.Service.AssemblyInfo.cs
+F:\Brix\Brix final project\Transaction.Service\obj\Debug\netcoreapp3.1\Transaction.Service.dll
+F:\Brix\Brix final project\Transaction.Service\obj\Debug\netcoreapp3.1\Transaction.Service.pdb

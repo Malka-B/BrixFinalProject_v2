@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "aeYr4ZfkIYyzMgbgNYMmBM7xj8CEG0spRp/97M6NBQM31ZtMyYsoChp08QNSU5PFFW1Ux2vHPyPj+sbA0AUzQw==",
+  "dgSpecHash": "ojpsfSoa1R+tlS+Vc+mPlpJrLfV3CLo8Tl1l1yMVE6ZPWHYZc89RggXBWRTxsEZUjNm0HLJQfJrbLwnEX+6YAQ==",
   "success": true,
   "projectFilePath": "F:\\Brix\\Brix final project\\Account.Api\\Account.WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\WIN10\\.nuget\\packages\\automapper\\10.0.0\\automapper.10.0.0.nupkg.sha512",
     "C:\\Users\\WIN10\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.0.1\\automapper.extensions.microsoft.dependencyinjection.8.0.1.nupkg.sha512",
+    "C:\\Users\\WIN10\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\3.1.6\\microsoft.aspnetcore.authentication.google.3.1.6.nupkg.sha512",
     "C:\\Users\\WIN10\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\WIN10\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
     "C:\\Users\\WIN10\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\3.1.0\\microsoft.aspnetcore.razor.language.3.1.0.nupkg.sha512",

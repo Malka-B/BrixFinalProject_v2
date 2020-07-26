@@ -15,8 +15,8 @@ namespace Account.Data.Migrations
                     FirstName = table.Column<string>(nullable: true),
                     LastName = table.Column<string>(nullable: true),
                     Email = table.Column<string>(nullable: true),
-                    PasswordHash = table.Column<byte[]>(nullable: true),
-                    PassowrdSalt = table.Column<byte[]>(nullable: true)
+                    PasswordHash = table.Column<string>(nullable: true),
+                    PassowrdSalt = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "TroqUrY6FVjH3pZdyoeYEKXrGIj7XCDa5mh77fOmIy3fycbsXQgZtgMuQPLoqw8dRRmGYsd6ETcNXvX1rMgvlw==",
+  "dgSpecHash": "Vqqzw4Sgev1xbmAKxZJAiHpJ8eEIX//kTnpwPzsrVV3W/qgWRk/7Yx5iHPPfNQC+M5AxYFeRmJIKg+eotC0g5A==",
   "success": true,
   "projectFilePath": "F:\\Brix\\Brix final project\\Account.Service\\Account.Service.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\WIN10\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\3.1.6\\microsoft.aspnetcore.authentication.google.3.1.6.nupkg.sha512"
+  ],
   "logs": []
 }

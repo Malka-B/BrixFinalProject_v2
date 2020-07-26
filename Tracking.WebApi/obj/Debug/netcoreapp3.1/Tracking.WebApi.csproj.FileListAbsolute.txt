@@ -1,0 +1,5 @@
+F:\Brix\Brix final project\Tracking.WebApi\obj\Debug\netcoreapp3.1\Tracking.WebApi.csprojAssemblyReference.cache
+F:\Brix\Brix final project\Tracking.WebApi\obj\Debug\netcoreapp3.1\Tracking.WebApi.csproj.CoreCompileInputs.cache
+F:\Brix\Brix final project\Tracking.WebApi\obj\Debug\netcoreapp3.1\Tracking.WebApi.MvcApplicationPartsAssemblyInfo.cache
+F:\Brix\Brix final project\Tracking.WebApi\obj\Debug\netcoreapp3.1\Tracking.WebApi.AssemblyInfoInputs.cache
+F:\Brix\Brix final project\Tracking.WebApi\obj\Debug\netcoreapp3.1\Tracking.WebApi.AssemblyInfo.cs
