@@ -1,0 +1,135 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Account.NSB.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "C:\\Users\\User\\Desktop\\brix - gibui\\Brix_FinalProject\\Messages\\Messages.csproj": "1.0.0",
+          "Messages": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Account.NSB.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Account.NSB.Service.dll": {}
+        }
+      },
+      "Messages/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Messages.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Messages.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Account.NSB.Service/1.0.0": {
+      "type": "project",
+      "path": "../Account.NSB.Services/Account.NSB.Service.csproj",
+      "msbuildProject": "../Account.NSB.Services/Account.NSB.Service.csproj"
+    },
+    "Messages/1.0.0": {
+      "type": "project",
+      "path": "../../../BrixFinalProject/Brix_FinalProject/Messages/Messages.csproj",
+      "msbuildProject": "../../../BrixFinalProject/Brix_FinalProject/Messages/Messages.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "Account.NSB.Service >= 1.0.0",
+      "C:\\Users\\User\\Desktop\\brix - gibui\\Brix_FinalProject\\AccountService.Data\\Account.Data.csproj"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\brix - gibui\\Brix_FinalProject\\Account.NSB.Data\\Account.NSB.Data.csproj",
+      "projectName": "Account.NSB.Data",
+      "projectPath": "C:\\Users\\User\\Desktop\\brix - gibui\\Brix_FinalProject\\Account.NSB.Data\\Account.NSB.Data.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\brix - gibui\\Brix_FinalProject\\Account.NSB.Data\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "projectReferences": {
+            "C:\\Users\\User\\Desktop\\brix - gibui\\Brix_FinalProject\\Account.NSB.Services\\Account.NSB.Service.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\brix - gibui\\Brix_FinalProject\\Account.NSB.Services\\Account.NSB.Service.csproj"
+            },
+            "C:\\Users\\User\\Desktop\\brix - gibui\\Brix_FinalProject\\AccountService.Data\\Account.Data.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\brix - gibui\\Brix_FinalProject\\AccountService.Data\\Account.Data.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for 'C:\\Users\\User\\Desktop\\brix - gibui\\Brix_FinalProject\\AccountService.Data\\Account.Data.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
+      "libraryId": "C:\\Users\\User\\Desktop\\brix - gibui\\Brix_FinalProject\\AccountService.Data\\Account.Data.csproj",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project 'C:\\Users\\User\\Desktop\\brix - gibui\\Brix_FinalProject\\Messages\\Messages.csproj'. Check that the project reference is valid and that the project file exists.",
+      "libraryId": "C:\\Users\\User\\Desktop\\brix - gibui\\Brix_FinalProject\\Messages\\Messages.csproj",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
+}

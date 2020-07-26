@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "YdOA57/EFOEsTLE1j6qNtH32AJSo0La6UMEZvy0VGFbnsoYd0N7YR+NgF/SfPLIQjeKswJA//jPzqYOBMuz/bg==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\User\\Desktop\\brix - gibui\\Brix_FinalProject\\Account.NSB.Services\\Account.NSB.Service.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project 'C:\\Users\\User\\Desktop\\brix - gibui\\Brix_FinalProject\\Messages\\Messages.csproj'. Check that the project reference is valid and that the project file exists.",
+      "libraryId": "C:\\Users\\User\\Desktop\\brix - gibui\\Brix_FinalProject\\Messages\\Messages.csproj",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
+}
